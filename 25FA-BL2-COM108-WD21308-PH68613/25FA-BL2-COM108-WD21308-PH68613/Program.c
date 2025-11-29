@@ -14,7 +14,7 @@ int main()
 	int mang[1000];
 	for ( i = 0; i < n; i++)
 	{
-		printf("nhap gia tri cho phan tu thu [%d]:", i +1 );
+		printf("nhap gia tri cho phan tu thu [%d]:", i + 1 );
 		scanf("%d", &mang[i]);
 	}
 	for ( i = 0; i < n; i++)
