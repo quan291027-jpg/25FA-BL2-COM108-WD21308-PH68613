@@ -39,6 +39,42 @@ void sapXepMang1Chieu() {
 		printf("mang[%d]=%d", i, intergerArray[i]);
 	}
 }
+void demoMang2Chieu()
+{
+	char kyTu = 'A';
+	char mangKyTu[10] ;
+	for (int i = 0; i < 3; i++)
+	{
+		scanf(" %c", &mangKyTu[i]);
+	}
+	//fgets(mangKyTu);
+	for (int i = 0; i < 3 ; i++)
+	{
+		printf("%c", mangKyTu[i]);
+	}
+	printf("\n");
+	//puts(mangKyTu);
+	
+
+	int array[2][3];
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			printf("mang[%d][%d] ,",i,j);
+			scanf("%d", &array[i] [j]);
+		}
+		
+	}
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			printf("%d,", array[i][j]);
+		}
+		printf("\n");
+	}
+}
 void lapChucNang(int chonChucNang)
 {
 	int tiepTuc = 1;
@@ -54,6 +90,7 @@ void lapChucNang(int chonChucNang)
 			break;
 		case 3:sapXepMang1Chieu();
 			break;
+		case 4:demoMang2Chieu();
 		case 0:
 			return;
 		default:
@@ -82,6 +119,8 @@ int main()
 		printf("2. TEN chuc nang 2");
 		printf("\n");
 		printf("3. TEN chuc nang 3");
+		printf("\n");
+		printf("4. DEMO mang 2 chieu");
 		printf("\n");
 		printf("Hay chon CN [0-3]: ");
 		scanf("%d", &chonChucNang);
