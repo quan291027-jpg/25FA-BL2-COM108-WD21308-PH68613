@@ -1,5 +1,9 @@
 ﻿#include <stdio.h>
 #include<math.h>
+
+
+
+
 // 1. Kiểm tra số nguyên
 void kiemTraSoNguyen() {
     int i = 1;
@@ -104,18 +108,40 @@ void chuongTrinhTinhTienchoQuanKareoke() {
 
 // Các chức năng còn lại
 void tinhTienDien() {
-    int i = 1;
-    while (i == 1) {
+    int tieptuc = 1;
+    int kwh;
+
+    while (tieptuc == 1) {
+
         printf("\nBAN DANG O CHUC NANG: TINH TIEN DIEN\n");
-        printf("Ban co muon tiep tuc? [1-Co | so khac-Khong]: ");
-        scanf("%d", &i);
+        printf("Nhap so kwh ma khach hang da su dung: ");
+        scanf("%d", &kwh);
+
+        int bac_kwh[] = { 50, 50, 100, 100, 100, 1000000 };
+        int gia[] = { 1678, 1734, 2014, 2536, 2834, 2927 };
+
+        long tien = 0;
+        int bac = 0;
+
+        while (kwh > 0 && bac < 6) {
+            int muc = (kwh > bac_kwh[bac]) ? bac_kwh[bac] : kwh;
+            tien += muc * gia[bac];
+            kwh -= muc;
+            bac++;
+        }
+
+        printf("So tien dien phai tra: %ld dong\n", tien);
+
+        printf("\nBan co muon tiep tuc? [1-Co | so khac-Khong]: ");
+        scanf("%d", &tieptuc);
     }
-    printf("\nDang o chuc nang: Tinh Tien Dien\n");
+
 }
 void chucNangDoiTien() {
     int i = 1;
     while (i == 1) {
         printf("\nBAN DANG O CHUC NANG: CHUC NANG DOI TIEN\n");
+
         printf("Ban co muon tiep tuc? [1-Co | so khac-Khong]: ");
         scanf("%d", &i);
     }
