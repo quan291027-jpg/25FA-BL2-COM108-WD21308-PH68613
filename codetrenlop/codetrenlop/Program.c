@@ -11,36 +11,6 @@ void uocChungBoiChung()
 {
 	printf("Uoc Chung Boi Chung");
 }
-
-void lapChucNang(int chonChucNang)
-{
-	int tiepTuc = 1;
-	while (tiepTuc == 1)
-	{
-		switch (chonChucNang)
-		{
-		case 1:
-			kiemTraSoNguyen();
-			break;
-		case 2:
-			uocChungBoiChung();
-			break;
-		case 3:
-			// goi TEN ham CN3
-			break;
-		case 0:
-			return;
-		default:
-			printf("Hay chon lai [0-3]");
-			break;
-		}
-
-		printf("\n");
-		printf("Tiep tuc CN nay? [1=Co | 0=Khong]: ");
-		scanf("%d", &tiepTuc);
-		system("cls");
-	}
-}
 void sapXepMang1Chieu() {
 	int intergerArray[100];
 	int length;
@@ -63,7 +33,39 @@ void sapXepMang1Chieu() {
 			i = -1;
 		}
 	}
-	printf("Xuat mang du lieu %d phan tu  Giam dan\n", length);
+	printf("Xuat mang du lieu %d phan tu  tang dan\n", length);
+	for (int i = 0; i < length ; i++)
+	{
+		printf("mang[%d]=%d", i, intergerArray[i]);
+	}
+}
+void lapChucNang(int chonChucNang)
+{
+	int tiepTuc = 1;
+	while (tiepTuc == 1)
+	{
+		switch (chonChucNang)
+		{
+		case 1:
+			kiemTraSoNguyen();
+			break;
+		case 2:
+			uocChungBoiChung();
+			break;
+		case 3:sapXepMang1Chieu();
+			break;
+		case 0:
+			return;
+		default:
+			printf("Hay chon lai [0-3]");
+			break;
+		}
+
+		printf("\n");
+		printf("Tiep tuc CN nay? [1=Co | 0=Khong]: ");
+		scanf("%d", &tiepTuc);
+		system("cls");
+	}
 }
 
 
