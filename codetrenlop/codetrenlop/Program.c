@@ -2,6 +2,7 @@
 // Chuong trinh phan mem Bat dau thuc thi & Ket thuc o day.!
 
 #include <stdio.h>
+#include<string.h>
 void kiemTraSoNguyen()
 {
 	printf("Kiem Tra So Nguyen");
@@ -75,6 +76,54 @@ void demoMang2Chieu()
 		printf("\n");
 	}
 }
+void demoString()
+{
+	// string - "string.h"
+	char mangKyTu[50];
+	while (getchar() != '\n');
+	printf("Nhap du lieu: ");
+	fgets(mangKyTu,sizeof(mangKyTu), stdin);
+	printf("%s", &mangKyTu);
+	printf("\n");
+	printf("String Length: ");
+	printf("%d", strlen(mangKyTu) - 1);
+	printf("\n");
+	printf("String compare the same as: ");
+	printf("%d", strcmp("aBc","aBc"));
+	printf("\n");
+	printf("String Compare The Same As: ");
+	printf("%d", strcmp("A", "C"));
+	printf("\n");
+	printf("String Compare The Same As: ");
+	printf("%d", strcmp("C", "A"));
+	printf("\n");
+
+	printf("String reverse:Encryption");
+	printf("%s", strrev(mangKyTu));
+	printf("\n");
+	printf("String reverse:Decryption ");
+	printf("%s", strrev(mangKyTu));
+	printf("\n");
+	printf("String Lower: ");
+	printf("%s", strlwr(mangKyTu));
+	printf("\n");
+	printf("String Upper: ");
+	printf("%s", strupr(mangKyTu));
+	printf("\n");
+	printf("Find String in String: ");
+	if (strstr(mangKyTu, "A")!=NULL)
+	{
+		printf("Found: ");
+	}
+
+
+
+
+	//fgets(mangKyTu);
+	
+		//puts(mangKyTu);
+	
+}
 void lapChucNang(int chonChucNang)
 {
 	int tiepTuc = 1;
@@ -90,7 +139,12 @@ void lapChucNang(int chonChucNang)
 			break;
 		case 3:sapXepMang1Chieu();
 			break;
-		case 4:demoMang2Chieu();
+		case 4:
+			demoMang2Chieu();
+			break;
+		case 5:
+			demoString();
+			break;
 		case 0:
 			return;
 		default:
@@ -104,6 +158,7 @@ void lapChucNang(int chonChucNang)
 		system("cls");
 	}
 }
+
 
 
 
@@ -122,6 +177,8 @@ int main()
 		printf("\n");
 		printf("4. DEMO mang 2 chieu");
 		printf("\n");
+		printf("5. demo string");
+		printf("\n");
 		printf("Hay chon CN [0-3]: ");
 		scanf("%d", &chonChucNang);
 		lapChucNang(chonChucNang);
@@ -131,4 +188,4 @@ int main()
 
 
 
-// Debug/Run chuong trinh: bam "F5" hoac "Debug > Start Debugging" tren menu
+
