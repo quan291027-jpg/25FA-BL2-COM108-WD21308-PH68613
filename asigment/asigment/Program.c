@@ -57,8 +57,6 @@ void kiemTraSoNguyen() {
 
    
 }
-
-
 // 2. Tìm ước chung & bội chung 2 số
 void timUocSoChungVaBoiSoChungCua2so() {
     int i = 1;
@@ -252,9 +250,6 @@ void xayDungChuongTrinhVayTienMuaXe() {
 
     return 0;
 }
-    
-   
-
 void sapXepThongTinSinhVien() {
     typedef struct {
         char hoTen[50];
